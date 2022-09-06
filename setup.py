@@ -1,8 +1,11 @@
 import setuptools
 
+
+long_description = open('README.md').read()
 setuptools.setup(name='pubmed_extract',
-      version='0.1',
+      version='0.4',
       description='Python Distribution Utilities',
+      long_description = 'README.md',
       author='Ashutosh Kumar',
       author_email='akashutosh09@gmail.com',
       url='https://skumarashutosh.github.io/',

@@ -1,7 +1,7 @@
-from affiliation_parser import parse_affil
+# from affiliation_parser import parse_affil
+from pubmed_extract.parse import parse_affil
 from pubmed_extract.extraction import my_function
 from tabulate import tabulate
-
 
 
 def add_list_record():
@@ -27,7 +27,7 @@ def add_list_record():
 
 def add_variable():
     one_pmid = input("Enter PMID: ")
-    a_list  = [one_pmid]
+    a_list = [one_pmid]
     print("Please wait !!")
     x = my_function(a_list)
     return x
@@ -40,10 +40,11 @@ def add_sting():
     x = my_function(a_list)
     return x
 
+
 def affilin_parser():
     affiliation_details = input("Enter affiliation details : ")
     x = parse_affil(affiliation_details)
-    print("\n",x,"\n")
+    print("\n", x, "\n")
     return x
 
 
@@ -52,12 +53,10 @@ print(" For keyword entry select--> a \n For single pmid select--> b  \n For add
       "Press any key to exit \n")
 menuchoices = {'a': add_sting, 'b': add_variable, 'c': add_list_record, 'd': affilin_parser}
 
-
 try:
     ret = menuchoices[input()]()
 except:
-    print("Wrong_choise")
+    print("Wrong_choice")
     exit()
-
 
 # alist=['23184261', '23184272', '23184263']
